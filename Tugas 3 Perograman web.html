@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<style>
+    /* Flexbox untuk Layout Utama */
+    body { display: flex; flex-direction: column; min-height: 100vh; margin: 0; font-family: sans-serif; }
+    header, footer { display: flex; justify-content: space-between; padding: 20px; background: #333; color: white; }
+
+    /* CSS Grid 4 Kartu Artikel */
+    .grid-container { 
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+        gap: 20px; 
+        padding: 20px; 
+        flex: 1;
+    }
+    .card {border: 1px solid #ddd; padding: 15px; border-radius: 8px; box-shadow: 2px 2px 10px rgba(0 , 0, 0, 0, 1); }
+</style>   
+</head>
+<body>
+
+<header>
+    <div>Universitas yudharta Pasuruan</div>
+    <nav>Beranda | Berita</nav>
+</header>
+
+<div class="grid-container">
+    <div class="card"><h3>Artikel 1</h3><p>Konten Tata Cara Memasak Nasi. . . </p></div>
+    <div class="card"><h3>Artikel 2</h3><p>Konten Berita Mahasiswa IT. . .</p></div>
+    <div class="card"><h3>Artikel 3</h3><p>Info Seputar VueJS. . .</p></div>
+    <div class="card"><h3>Artikel 4</h3><p>Update Teknologi Hono. . .</p></div>
+</div>
+
+<footer>
+    <div>&copy, 2026 Teknik Informatika</div>
+    <div>Kontak Kami</div>
+</footer>
+
+</body>
+</html>
