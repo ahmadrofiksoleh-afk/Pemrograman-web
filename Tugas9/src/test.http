@@ -1,0 +1,29 @@
+### Get semua inventaris
+GET http://localhost:3000/api/inventaris
+
+### Get detail barang
+GET http://localhost:3000/api/inventaris/4
+
+### Post Tambah Barang baru
+POST http://localhost:3000/api/inventaris
+Content-Type: application/json
+
+{
+    "nama": "Laptop Legion 5 Pro - Ruang Dosen",
+    "kategori": "Komputer",
+    "jumlah": 1,
+    "kondisi": "Baik"
+}
+
+### Error 404 (ID tidak ada)
+GET http://localhost:3000/api/inventaris/99
+
+### Error 400 (Data tidak lengkap)
+POST http://localhost:3000/api/inventaris
+Content-Type: application/json
+{
+    "jumlah": 5
+}
+
+### Error 400 (Format Bukan JSON)
+POST http://localhost:3000/api/inventaris
